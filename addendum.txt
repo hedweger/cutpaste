@@ -1,0 +1,13 @@
+Tenhle adresáš obsahuje zdrojové kódy bakalářské práce Detekce povrchových defektů kovových dílů pomocí neuronových sítí. 
+Hlavní trénovací skript se nachází v souboru "train.py", který jde spustit příkazem "python3 train.py" v příkazovém řádku. Soubor má dva povinné parametry a to --dataset_type (mvtec, MPDD, MPDD2 - pozor case sensitive systémy, tento název musí být také název složky datasetů) a --dataset_class (třídu kterou chceme trénovat).
+Soubory datové množiny se musí nacházet v cestě ./datasets/data/$složka s názvem datasetu$/$třída$/... a MUSÍ mít stejný systém složek jako dataset MVTec AD!!!
+Během trénování se ukládá log do tb_logs, který jde spustit s pomocí příkazu "tensorboard --logdir tb_logs/". 
+
+This folder contains source codes for a bachelor thesis titled Surface defect detection of metal parts based on neural networks.
+The main training scrips is in the file train.py, which can be run with the command "python3 train.py" in a bash/shell. The script has two required parameters: --dataset_type (mvtec, MPDD, MPDD2 - beware of case sensitive filesystems, this string MUST be the name of the folder which contains the dataset) and --dataset_class (the class to train). 
+Dataset files must be placed in the path ./datasets/data/$dataset folder$/$class name$/... and MUST have the same internal folder system as the MVTec AD!!!
+During training a log is saved into tb_logs, which can be viewed through the command "tensorboard --logdir tb_logs/". 
+
+MVTec AD datastet - https://www.mvtec.com/company/research/datasets/mvtec-ad/downloads
+MPDD - https://github.com/stepanje/MPDD
+MPDD2 - https://github.com/stepanje/MPDD2
